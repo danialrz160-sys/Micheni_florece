@@ -1,0 +1,346 @@
+/* ==========================================
+   MICHENÍ - ESTILOS PRINCIPALES
+   ========================================== */
+
+:root {
+    --rosa-principal: #F48DA7;
+    --crema-suave: #FFF8F0;
+    --rosa-palo: #F7DCE3;
+    --rosa-empolvado: #E8B6C3;
+    --texto-oscuro: #4A3E3D;
+    --texto-suave: #7A6B6A;
+    --blanco: #FFFFFF;
+    --sombra-suave: 0 8px 24px rgba(244, 141, 167, 0.15);
+    --sombra-card: 0 4px 15px rgba(0, 0, 0, 0.04);
+    --transicion: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --radius-card: 20px;
+    --radius-btn: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--crema-suave);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   LOGO "M" ESTILO LIMPIAPIPAS (PIPE CLEANER)
+   ========================================== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* Letra M con simulación de efecto felpudo/limpiapipas */
+.logo-m-limpiapipas {
+    font-family: 'Satisfy', cursive;
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: var(--rosa-principal);
+    display: inline-block;
+    position: relative;
+    /* Sombras múltiples suaves para dar sensación de volumen y felpa */
+    text-shadow: 
+        1px 1px 0px #e07993,
+        -1px -1px 0px #f8a8bc,
+        2px 2px 5px rgba(244, 141, 167, 0.5);
+    filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.1));
+    transform: rotate(-3deg); /* Toque artesanal único */
+}
+
+.logo-text {
+    font-family: 'Satisfy', cursive;
+    font-size: 2.2rem;
+    color: var(--texto-oscuro);
+}
+
+/* En caso de que tengas el archivo de tu logo en imagen, usa esta clase: */
+.logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* NAVBAR MULTIPÁGINA */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 248, 240, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 500;
+    transition: var(--transicion);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--rosa-principal);
+    font-weight: 600;
+}
+
+.btn-wpp-nav {
+    background: #25D366;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transicion);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--rosa-principal);
+    color: var(--blanco);
+    box-shadow: 0 4px 15px rgba(244, 141, 167, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--rosa-palo);
+    color: var(--texto-oscuro);
+}
+
+/* ENCABEZADOS DE CADA PÁGINA */
+.page-header {
+    padding: 60px 0 30px;
+    text-align: center;
+}
+
+.page-title {
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+    color: var(--rosa-principal);
+}
+
+/* SECCIÓN ESPECIAL REGALOS (INICIO) */
+.special-section {
+    padding: 60px 0;
+    background-color: var(--blanco);
+    border-radius: 40px;
+    margin: 40px 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background-color: var(--crema-suave);
+    padding: 30px 20px;
+    border-radius: var(--radius-card);
+    text-align: center;
+    border: 1px solid var(--rosa-palo);
+}
+
+/* PRODUCTOS Y GRILLAS */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px 0;
+}
+
+.product-card {
+    background-color: var(--blanco);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--rosa-palo);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* FILTROS Y BÚSQUEDA EN CATÁLOGO */
+.catalog-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid var(--rosa-empolvado);
+    width: 300px;
+    outline: none;
+}
+
+.category-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--blanco);
+    border: 1px solid var(--rosa-palo);
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: var(--rosa-principal);
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid var(--rosa-palo);
+    margin-top: 60px;
+    color: var(--texto-suave);
+}
+/* EFECTO DE FLORECITA FLOTANTE AL HACER CLIC */
+.click-flower {
+    position: fixed;
+    pointer-events: none;
+    font-size: 1.5rem;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    animation: floatUpAndFade 1s ease-out forwards;
+}
+
+@keyframes floatUpAndFade {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
+    }
+    50% {
+        opacity: 0.9;
+        transform: translate(-50%, -80px) scale(1.2) rotate(15deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -120px) scale(1) rotate(-15deg);
+    }
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES Y TABLETS
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Ajuste de contenedor general */
+    .container {
+        padding: 1rem;
+    }
+
+    /* Header y Navegación en móvil */
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 0.2rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* Títulos y Hero */
+    .hero h1, .section-title {
+        font-size: 2.1rem;
+    }
+
+    .hero p, .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    /* Tarjetas de Servicios y Banners */
+    .services-grid, 
+    .social-banner {
+        grid-template-columns: 1fr; /* Pasa a 1 sola columna */
+        gap: 1.2rem;
+    }
+
+    /* Rejilla del Zodíaco */
+    .zodiac-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en celular */
+        gap: 0.6rem;
+    }
+
+    .zodiac-card {
+        padding: 0.8rem 0.4rem;
+    }
+
+    .zodiac-icon {
+        font-size: 1.8rem;
+    }
+
+    /* Modal emergente */
+    .modal-card {
+        padding: 1.5rem;
+        width: 95%;
+    }
+}

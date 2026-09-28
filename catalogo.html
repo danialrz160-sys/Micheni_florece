@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Michení</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-m-limpiapipas">M</span>
+                <span class="logo-text">ichení</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="catalogo.html" class="nav-link active">Catálogo</a></li>
+                <li><a href="colecciones.html" class="nav-link">Colecciones</a></li>
+                <li><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Nuestro Catálogo</h1>
+            <p style="color: var(--texto-suave);">Elige el detalle artesanal que más te guste y pídelo por WhatsApp.</p>
+        </div>
+
+        <!-- FILTROS Y BÚSQUEDA -->
+        <div class="catalog-controls">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Buscar producto...">
+            </div>
+            <div class="category-filters" id="category-filters">
+                <button class="filter-btn active" data-category="todos">✨ Todos</button>
+                <button class="filter-btn" data-category="flores">🌸 Flores</button>
+                <button class="filter-btn" data-category="llaveros">🎀 Llaveros</button>
+                <button class="filter-btn" data-category="munequitos">🧸 Muñequitos</button>
+                <button class="filter-btn" data-category="regalos">🎁 Regalos</button>
+                <button class="filter-btn" data-category="otros">✨ Otros</button>
+            </div>
+        </div>
+
+        <!-- GRILLA DE PRODUCTOS -->
+        <div class="products-grid" id="products-grid">
+            <!-- Se llena con JavaScript -->
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+        <footer class="footer">
+        <p>© 2026 Michení. Creaciones hechas con amor 🌸</p>
+    </footer>
+
+</body>
+</html>
