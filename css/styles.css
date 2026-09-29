@@ -284,63 +284,78 @@ body {
     }
 }
 
-/* ==========================================
-   ADAPTACIÓN PARA CELULARES Y TABLETS
-   ========================================== */
+/* ===================================================
+   RESPONSIVE DESIGN (Celulares, Tablets y PCs)
+   =================================================== */
 
-@media (max-width: 768px) {
-    /* Ajuste de contenedor general */
-    .container {
-        padding: 1rem;
+/* Ajuste general para imágenes y contenedores */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* 📱 TABLETS (Pantallas de hasta 992px) */
+@media (max-width: 992px) {
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+        gap: 20px;
     }
+    
+    .page-title {
+        font-size: 2.2rem;
+    }
+}
 
-    /* Header y Navegación en móvil */
-    header {
+/* 📱 CELULARES (Pantallas de hasta 600px) */
+@media (max-width: 600px) {
+    /* Menú de navegación apilado y centrado */
+    .nav-container {
         flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        text-align: center;
+        gap: 15px;
+        padding: 15px 10px;
     }
 
-    nav a {
-        margin: 0 0.2rem;
-        padding: 0.4rem 0.8rem;
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-link {
         font-size: 0.9rem;
+        padding: 6px 10px;
     }
 
-    /* Títulos y Hero */
-    .hero h1, .section-title {
-        font-size: 2.1rem;
+    /* Grillas a 1 sola columna para móviles */
+    .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 columna vertical */
+        gap: 20px;
     }
 
-    .hero p, .section-subtitle {
-        font-size: 0.95rem;
+    /* Ajustes visuales para textos e imágenes en celular */
+    .page-header {
+        text-align: center;
+        padding: 20px 10px;
     }
 
-    /* Tarjetas de Servicios y Banners */
-    .services-grid, 
-    .social-banner {
-        grid-template-columns: 1fr; /* Pasa a 1 sola columna */
-        gap: 1.2rem;
-    }
-
-    /* Rejilla del Zodíaco */
-    .zodiac-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas en celular */
-        gap: 0.6rem;
-    }
-
-    .zodiac-card {
-        padding: 0.8rem 0.4rem;
-    }
-
-    .zodiac-icon {
+    .page-title {
         font-size: 1.8rem;
     }
 
-    /* Modal emergente */
-    .modal-card {
-        padding: 1.5rem;
-        width: 95%;
+    /* Botones más cómodos para pulsar con el pulgar */
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
     }
 }
