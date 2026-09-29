@@ -359,3 +359,21 @@ img {
         padding: 12px 20px;
     }
 }
+/* Ajuste responsivo para la barra de búsqueda */
+.search-container, 
+input[type="text"] {
+    width: 100%;
+    max-width: 500px; /* Ancho cómodo en PC */
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .search-container, 
+    input[type="text"] {
+        max-width: 90%; /* En celular ocupa el 90% de la pantalla para dejar margen */
+        font-size: 0.95rem;
+        padding: 10px 15px;
+    }
+}
